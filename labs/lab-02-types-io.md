@@ -87,28 +87,3 @@ s = \sqrt{\frac{(x_1-\mu)^{2}+(x_2-\mu)^{2}+(x_3-\mu)^{2}}{2}}
 $$
 
 API: `sqrt`, `pow` или `fabs` не обязателен.
-
-15. `haversine.cpp` — две точки на сфере: широта/долгота в градусах `lat1 lon1 lat2 lon2`, радиус Земли `R = 6371` км. Упрощённо:
-
-$$
-\begin{aligned}
-\varphi_i &= \mathrm{lat}_i \cdot \frac{\pi}{180},\quad
-\lambda_i = \mathrm{lon}_i \cdot \frac{\pi}{180} \\
-a &= \sin^{2}\frac{\Delta\varphi}{2} + \cos\varphi_1\cos\varphi_2\sin^{2}\frac{\Delta\lambda}{2} \\
-d &= 2R \cdot \operatorname{atan2}\bigl(\sqrt{a},\, \sqrt{1-a}\bigr)
-\end{aligned}
-$$
-
-API: `sin`, `cos`, `sqrt`, `atan2` (из `<cmath>`).
-
-16. `body_bmi.cpp` — вес `kg`, рост `cm`:
-
-$$
-m = \frac{cm}{100}, \quad BMI = \frac{kg}{m^{2}}
-$$
-
-Напечатать BMI, `ceil(BMI)`, `floor(BMI)`.
-
-17. `change.cpp` — одно `double x`: тремя строками `fabs`, `ceil`, `floor`.
-
-`#include <cmath>`, `using namespace std;`
